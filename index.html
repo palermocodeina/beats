@@ -18,6 +18,7 @@
 
     <main class="container">
         <section class="beat-grid">
+            
             <div class="beat-card">
                 <div class="beat-info">
                     <span class="beat-number">01</span>
@@ -26,18 +27,18 @@
                 </div>
                 
                 <div class="player-controls">
-                    <button class="play-btn" data-audio="PCBEAT1.mp3">▶</button>
+                    <button class="play-btn" data-audio="audio1">▶</button>
                     <div class="track-info">
                         <input type="range" class="seek-bar" value="0" min="0" step="1">
                         <div class="time-stamps">
                             <span class="curr-time">0:00</span>
-                            <span class="dur-time">0:19</span>
+                            <span class="dur-time">0:00</span>
                         </div>
                     </div>
                 </div>
 
                 <button class="reserve-btn" data-link="https://mpago.la/25DyFLH">Reservar</button>
-                <audio id="audio1" src="PCBEAT1.mp3"></audio>
+                <audio id="audio1" src="PCBEAT1.mp3" preload="metadata"></audio>
             </div>
 
             <div class="beat-card">
@@ -47,18 +48,19 @@
                     <p class="tag">@palermo.codeina</p>
                 </div>
                 <div class="player-controls">
-                    <button class="play-btn" data-audio="PCBEAT2.mp3">▶</button>
+                    <button class="play-btn" data-audio="audio2">▶</button>
                     <div class="track-info">
                         <input type="range" class="seek-bar" value="0" min="0" step="1">
                         <div class="time-stamps">
                             <span class="curr-time">0:00</span>
-                            <span class="dur-time">0:15</span>
+                            <span class="dur-time">0:00</span>
                         </div>
                     </div>
                 </div>
                 <button class="reserve-btn" data-link="https://mpago.la/25DyFLH">Reservar</button>
-                <audio id="audio2" src="PCBEAT2.mp3"></audio>
+                <audio id="audio2" src="PCBEAT2.mp3" preload="metadata"></audio>
             </div>
+
         </section>
     </main>
 
