@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const playButtons = document.querySelectorAll(".play-btn");
     let currentAudio = null;
 
-    // Formatear tiempo (segundos a 0:00)
     const formatTime = (time) => {
+        if (isNaN(time)) return "0:00";
         const min = Math.floor(time / 60);
         const sec = Math.floor(time % 60);
         return `${min}:${sec < 10 ? '0' + sec : sec}`;
@@ -12,19 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
     playButtons.forEach(btn => {
         const audioId = btn.dataset.audio;
         const audio = document.getElementById(audioId);
+        
+        if (!audio) return;
+
         const card = btn.closest('.beat-card');
         const seekBar = card.querySelector('.seek-bar');
         const currTimeLabel = card.querySelector('.curr-time');
         const durTimeLabel = card.querySelector('.dur-time');
 
-        // Cargar duración al iniciar
-        audio.onloadedmetadata = () => {
+        // Actualizar duración cuando el archivo carga
+        audio.addEventListener('loadedmetadata', () => {
             durTimeLabel.textContent = formatTime(audio.duration);
             seekBar.max = audio.duration;
-        };
+        });
 
-        // Click en Play/Pause
         btn.addEventListener("click", () => {
+            // Pausar el anterior si hay uno sonando
             if (currentAudio && currentAudio !== audio) {
                 currentAudio.pause();
                 document.querySelectorAll('.play-btn').forEach(b => b.textContent = "▶");
@@ -40,23 +43,23 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Actualizar barra de progreso
-        audio.ontimeupdate = () => {
+        audio.addEventListener('timeupdate', () => {
             seekBar.value = audio.currentTime;
             currTimeLabel.textContent = formatTime(audio.currentTime);
-        };
+        });
 
-        // Buscar en la barra (Seek)
         seekBar.addEventListener("input", () => {
             audio.currentTime = seekBar.value;
         });
     });
 
-    // Manejo de Reservas
+    // Evento para los botones de Reserva
     document.querySelectorAll(".reserve-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const link = btn.dataset.link;
-            window.open(link, "_blank");
+        btn.addEventListener("click", (e) => {
+            const link = btn.getAttribute("data-link");
+            if (link) {
+                window.open(link, "_blank");
+            }
         });
     });
 });
