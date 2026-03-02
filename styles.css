@@ -1,0 +1,166 @@
+:root {
+    --bg-color: #050505;
+    --card-bg: #0f0f0f;
+    --accent-color: #8a2be2; /* Púrpura Codeina */
+    --text-main: #e0e0e0;
+    --text-dim: #777;
+    --glitch-shadow: #ff00ff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Efecto de grano lo-fi */
+.grain-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Header Estilo Perfil */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+    margin-bottom: 15px;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.glitch-text {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 0 var(--glitch-shadow), -2px 0 #00ffff;
+}
+
+/* Grid de Beats */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.beat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.beat-card {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.beat-card:hover {
+    border-color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.beat-number {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.beat-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.tag {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+/* Player */
+.player-controls {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.play-btn {
+    background: none;
+    border: 1px solid var(--text-dim);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.play-btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.track-info {
+    flex-grow: 1;
+}
+
+.seek-bar {
+    width: 100%;
+    accent-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.time-stamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.reserve-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .beat-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .player-controls {
+        width: 100%;
+    }
+}
