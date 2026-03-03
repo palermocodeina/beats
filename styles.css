@@ -165,23 +165,17 @@ body {
     }
 }
 
-.botones-filtro{
-    .botones-filtro {
-    /* ya basta por favor me tienen secuestrado programando */
+.botones-filtro {
+    display: block;
+    margin: 20px auto;
     background: none;
-    border: 1px solid var(--text-dim);
-    color: var(--text-main);
-    padding: 8px 18px;
-    border-radius: 50px;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.85rem;
-    text-transform: uppercase; 
-    letter-spacing: 1px;   
-    transition: all 0.3s ease;
-        
+    transition: 0.2s;
+    text-transform: uppercase;
 }
-.botones-filtro:hover {
-    background-color: var(--accent-color); 
-    border-color: var(--accent-color);
-    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
-}
+
+
