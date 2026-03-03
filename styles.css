@@ -1,7 +1,7 @@
 :root {
     --bg-color: #050505;
     --card-bg: #0f0f0f;
-    --accent-color: #8a2be2; /* Púrpura Codeina */
+    --accent-color: #8a2be2; 
     --text-main: #e0e0e0;
     --text-dim: #777;
     --glitch-shadow: #ff00ff;
@@ -15,7 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Efecto de grano lo-fi */
+
 .grain-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -26,7 +26,7 @@ body {
     z-index: 10;
 }
 
-/* Header Estilo Perfil */
+
 .profile-header {
     display: flex;
     flex-direction: column;
@@ -154,7 +154,7 @@ body {
     font-size: 0.8rem;
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 600px) {
     .beat-card {
         flex-direction: column;
@@ -166,12 +166,22 @@ body {
 }
 
 .botones-filtro{
+    .botones-filtro {
+    /* ya basta por favor me tienen secuestrado programando */
     background: none;
     border: 1px solid var(--text-dim);
-    color: white;
-    width: 85px;
-    height: 40px;
-    border-radius: 20%;
+    color: var(--text-main);
+    padding: 8px 18px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: 0.2s;
+    font-size: 0.85rem;
+    text-transform: uppercase; 
+    letter-spacing: 1px;   
+    transition: all 0.3s ease;
+        
+}
+.botones-filtro:hover {
+    background-color: var(--accent-color); 
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
 }
