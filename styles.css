@@ -165,11 +165,13 @@ body {
     }
 }
 
-.botones-filtro {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    color: var(--text-main)
-    background-color: var(--accent-color)
+.botones-filtro{
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
 }
