@@ -166,12 +166,12 @@ body {
 }
 
 .botones-filtro{
-    background: var(--accent-color);
+        background: none;
+    border: 1px solid var(--text-dim);
     color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: bold;
+    width: 85px;
+    height: 40px;
+    border-radius: 20%;
     cursor: pointer;
-    font-size: 0.8rem;
+    transition: 0.2s;
 }
