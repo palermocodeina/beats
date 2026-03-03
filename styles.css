@@ -164,3 +164,10 @@ body {
         width: 100%;
     }
 }
+
+.botones-filtro {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
