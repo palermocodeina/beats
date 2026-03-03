@@ -170,15 +170,15 @@ body {
   margin-top: 40px;
   padding: 14px 40px;
 
-  font-family: var(--fuente-titulo);
+  font-family: var(--text-main);
   font-size: 0.85rem;
   text-decoration: none;
 
-  color: var(--color-fondo);
-  background: var(--color-verde-neon);
+  color: var(--accent-color;
+  background: var(--card-bg);
   border-radius: 6px;
 
-  box-shadow: 0 0 12px var(--color-verde-neon);
+  box-shadow: 0 0 12px var(--accent-color);
   transition: 0.2s ease;
 }
 
