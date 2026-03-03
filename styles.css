@@ -166,7 +166,7 @@ body {
 }
 
 .botones-filtro{
-        background: none;
+    background: none;
     border: 1px solid var(--text-dim);
     color: white;
     width: 85px;
