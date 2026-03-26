@@ -165,21 +165,33 @@ body {
     }
 }
 
-.botoninfo {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 14px 40px;
 
-  font-family: var(--text-main);
-  font-size: 0.85rem;
-  text-decoration: none;
+.info-link {
+    display: inline-block;
+    margin-top: 10px; 
+    padding: 4px 10px; 
+    
+   
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
 
-  color: var(--accent-color);
-  background: var(--card-bg);
-  border-radius: 6px;
+    
+    color: var(--text-dim);
+    background: transparent; 
+    border: 1px solid rgba(119, 119, 119, 0.3); 
+    border-radius: 4px;
+    
+    transition: 0.3s ease; 
+}
 
-  box-shadow: 0 0 12px var(--accent-color);
-  transition: 0.2s ease;
+
+.info-link:hover {
+    color: var(--text-main); 
+    border-color: rgba(224, 224, 224, 0.5); 
+    background: rgba(255, 255, 255, 0.03);
 }
 
 
