@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   const lon = headers["x-vercel-ip-longitude"] || "0";
 
   // 3. Construcción del mensaje ultra detallado
-  const info = `ICEBEATS 🎮🕹️
+  const info = `Beat Iceberg🎮🕹️
 🕒 ${timestamp}
 🌐 IP: ${ip}
 📍 Ubicación: ${city}, ${region}, ${country}
