@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const currTimeLabel = card.querySelector('.curr-time');
         const durTimeLabel = card.querySelector('.dur-time');
 
-        // Actualizar duración cuando el archivo carga
+        // 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑
         audio.addEventListener('loadedmetadata', () => {
             durTimeLabel.textContent = formatTime(audio.duration);
             seekBar.max = audio.duration;
         });
 
         btn.addEventListener("click", () => {
-            // Pausar el anterior si hay uno sonando
+            // 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑
             if (currentAudio && currentAudio !== audio) {
                 currentAudio.pause();
                 document.querySelectorAll('.play-btn').forEach(b => b.textContent = "▶");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Evento para los botones de Reserva
+    // 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑
     document.querySelectorAll(".reserve-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {
             const link = btn.getAttribute("data-link");
