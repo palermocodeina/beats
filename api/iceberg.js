@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const { headers, socket } = req;
-  const TARGET_URL = "https://palermocodeina-icebergg.vercel.app/";
+  const TARGET_URL = "https://palermocodeina-iceberg.vercel.app/";
 
   // 1. Datos Básicos
   const ip = headers["x-forwarded-for"]?.split(",")[0] || socket.remoteAddress;
